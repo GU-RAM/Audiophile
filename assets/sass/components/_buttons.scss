@@ -1,0 +1,47 @@
+/* Buttons */
+
+.button-primary {
+  font-size: 1.3rem;
+  background-color: $color-primary;
+  color: $color-light;
+  padding: 1.5rem 3rem;
+  border: none;
+  text-transform: uppercase;
+  transition: all 300ms;
+
+  &:hover {
+    background-color: $color-primary-hover;
+  }
+}
+
+.speaker-ZX9-btn {
+  background-color: $color-dark;
+
+  &:hover {
+    background-color: #4c4c4c;
+  }
+}
+
+.button-secondary {
+  transition: background-color 300ms, color 300ms;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  background-color: transparent;
+  color: $color-dark;
+  padding: 1.5rem 3rem;
+  border: 2px solid black;
+
+  &:hover {
+    background-color: $color-tertiary;
+    color: $color-light;
+  }
+}
+
+.go-back-btn {
+  color: rgba(0, 0, 0, 0.5);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+/* End Of Buttons */

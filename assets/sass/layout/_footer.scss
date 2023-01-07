@@ -1,0 +1,101 @@
+.footer-wrapper {
+  background-color: $color-tertiary;
+}
+
+.footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 10rem;
+  padding: 6rem 2.4rem 4rem;
+  color: $color-light;
+  position: relative;
+
+  &-orange-color-effect {
+    position: absolute;
+    top: 0;
+    border: 2px solid $color-primary;
+    width: 10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    @include media("md") {
+      left: 2.4rem;
+      transform: translateX(0);
+    }
+  }
+
+  &-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    @include media("md") {
+      align-items: flex-start;
+    }
+    @include media("lg") {
+      flex-direction: row;
+    }
+
+    &-main-nav {
+      display: flex;
+      margin: 0;
+      @include media("lg") {
+        margin-left: auto;
+      }
+
+      & ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        @include media("md") {
+          flex-direction: row;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  &-bottom {
+    margin-top: 3rem;
+    display: grid;
+    row-gap: 4rem;
+    text-align: center;
+    align-items: center;
+    color: $color-dark-grey;
+    @include media("md") {
+      grid-template-columns: 1fr 1fr;
+      text-align: left;
+    }
+    @include media("lg") {
+      align-items: end;
+    }
+
+    &-text {
+      @include media("md") {
+        grid-column: 1/3;
+      }
+      @include media("xlg") {
+        grid-column: 1/2;
+      }
+    }
+
+    &-social-networks {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      @include media("md") {
+        justify-self: end;
+      }
+      @include media("xlg") {
+        grid-row: 1/2;
+        grid-column: 2/3;
+      }
+      a {
+        color: $color-light;
+      }
+
+      i {
+        font-size: 2.4rem;
+      }
+    }
+  }
+}

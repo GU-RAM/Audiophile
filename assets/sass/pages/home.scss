@@ -1,0 +1,104 @@
+//Home page
+.home-speaker-ZX9 {
+  background-color: $color-primary;
+  background-image: url("../images/home/desktop/pattern-circles.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 3rem 2rem;
+  color: $color-light;
+
+  div h1 {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  div p {
+    max-width: 250px;
+    margin: 30px auto;
+    color: $color-light;
+  }
+
+  img {
+    max-width: 22rem;
+  }
+
+  @include media("xlg") {
+    padding: 0;
+    height: 55rem;
+    background-size: cover;
+    background-position: -215px 40%;
+
+    .main-two-celled-div-gen-img {
+      flex: 1;
+      text-align: right;
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .main-two-celled-div-gen-img img {
+      position: absolute;
+      right: 0;
+      bottom: -25px;
+      max-width: 40rem;
+    }
+
+    div p,
+    div h1 {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+.main-items-zx7speaker {
+  position: relative;
+
+  img {
+    border-radius: 1rem;
+    width: 100%;
+  }
+
+  &-text {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+  }
+}
+
+.main-items-yx1earphones {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  div {
+    flex: 1;
+    border-radius: 1rem;
+  }
+
+  img {
+    border-radius: 1rem;
+    height: 100%;
+  }
+
+  &-text {
+    padding: 4rem 0 4rem 2rem;
+    background-color: $color-secondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  img {
+    border-radius: 1rem;
+  }
+
+  @include media("sm") {
+    flex-direction: row;
+  }
+}
+
+// End Of Home Page

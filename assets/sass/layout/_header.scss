@@ -1,0 +1,258 @@
+/* header */
+.header-wrapper {
+  background-color: $color-tertiary;
+  color: $color-light;
+}
+.header {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  &-top {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .hamburger {
+    cursor: pointer;
+  }
+
+  hr {
+    height: 1px;
+    border: none;
+    background-color: #979797;
+    margin: 0 -2rem;
+  }
+
+  &-hamburger-nav {
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    top: 8.94rem;
+    bottom: 0;
+    opacity: 0;
+    transform: translateY(-100px);
+
+    &-unhide {
+      opacity: 1;
+      z-index: 2;
+      transform: translateY(1px);
+      transition: transform 0.5s ease-in-out 0s, opacity 0.5s ease-in-out 0s;
+    }
+
+    .common-nav {
+      padding: 8rem 2rem 3rem;
+      background-color: $color-light;
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+      margin-top: 0;
+    }
+  }
+
+  .basket:hover {
+    cursor: pointer;
+  }
+
+  .chosen-product-modal-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: $color-dark;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .chosen-product-modal {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width: auto;
+    flex-grow: 0;
+    background-color: $color-light;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 110px;
+    border-radius: 10px;
+  }
+
+  &-bottom {
+    text-align: center;
+    position: relative;
+    height: 550px;
+    display: flex;
+  }
+
+  &-bottom-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("../images/home/mobile/image-header.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 10% -20px;
+  }
+
+  &-bottom-text {
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  &-bottom-text h2 {
+    font-size: 1.4rem;
+    letter-spacing: 9px;
+    color: $color-dark-grey;
+  }
+
+  &-bottom-text h1 {
+    font-size: 4rem;
+    line-height: 1;
+  }
+
+  &-bottom-text p {
+    color: $color-dark-grey;
+  }
+
+  .pages-header-bottom {
+    padding: 3rem;
+    text-align: center;
+  }
+
+  .pages-header-bottom h1 {
+    font-size: 2.8rem;
+  }
+  @include media("xsm") {
+    &-bottom-img {
+      background-position-y: -60px;
+    }
+  }
+  @media only screen and (min-width: 450px) {
+    &-bottom-img {
+      width: 80%;
+      margin: 0 auto;
+      background-size: cover;
+      max-width: 450px;
+      background-position: 10% -92px;
+    }
+
+    &-bottom-text {
+      width: 80%;
+      max-width: 400px;
+    }
+
+    &-bottom-text h1 {
+      font-size: 5.6rem;
+    }
+  }
+
+  @include media("md") {
+    &-top {
+      gap: 50px;
+    }
+
+    .logo {
+      margin-right: auto;
+    }
+
+    &-hamburger-nav .common-nav {
+      padding: 80px 0 50px;
+    }
+
+    &-hamburger-nav ul {
+      flex-direction: row;
+      gap: 10px;
+    }
+
+    &-hamburger-nav li {
+      flex-grow: 1;
+    }
+
+    &-bottom-img {
+      background-position: 10% -142px;
+    }
+  }
+
+  @include media("lg") {
+    & hr {
+      margin: 0;
+    }
+    &-bottom-img {
+      background-image: url("../images/home/tablet/image-header.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 90%;
+      max-width: 700px;
+      background-position: 10% 80%;
+    }
+
+    .pages-header-bottom h1 {
+      font-size: 4rem;
+      padding: 5rem;
+    }
+
+    .chosen-product-modal {
+      margin-right: 20%;
+    }
+  }
+  @include media("xlg") {
+    .hamburger {
+      display: none;
+    }
+
+    .logo {
+      margin-right: 0;
+    }
+
+    &-bottom-img {
+      background-image: url("../images/home/desktop/image-hero.jpg");
+      background-size: 225%;
+      background-position: 80% -59px;
+      width: 50%;
+      position: static;
+      margin: 0;
+      margin-left: auto;
+    }
+
+    &-bottom-text {
+      align-items: flex-start;
+      text-align: left;
+      width: 50%;
+      margin: 0;
+      margin-right: auto;
+      position: static;
+      transform: translate(0, 0);
+    }
+
+    &-hamburger-nav {
+      display: none;
+    }
+  }
+}
+
+.hide-scroll {
+  overflow: hidden;
+}
+
+/* End Of Header */

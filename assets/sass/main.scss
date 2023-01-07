@@ -1,0 +1,15 @@
+@import "abstracts/variable";
+@import "abstracts/mixins";
+
+@import "components/buttons";
+
+@import "base/typography";
+@import "base/base";
+
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/individualItemsMain";
+@import "layout/main";
+@import "layout/footer";
+
+@import "pages/home.scss";

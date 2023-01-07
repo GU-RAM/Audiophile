@@ -1,0 +1,22 @@
+{
+  "name": "audiophile---markup-project",
+  "version": "1.0.0",
+  "description": "audiophile-markup-project",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass assets/sass/main.scss assets/css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GU-RAM/Audiophile.git"
+  },
+  "author": "Guram Dgebuadze",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GU-RAM/Audiophile/issues"
+  },
+  "homepage": "https://github.com/GU-RAM/Audiophile#readme",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
