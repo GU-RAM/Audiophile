@@ -1,6 +1,11 @@
-// body {
-//   font-family: Manrope;
-// }
+// Importing Font
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap");
+
+// Typography
+body {
+  font-size: 1.6rem;
+  font-family: "Manrope", sans-serif;
+}
 
 h1 {
   font-size: 4rem;
@@ -20,3 +25,4 @@ h2 {
 h3 {
   margin-bottom: 1.5rem;
 }
+// End Of Typography

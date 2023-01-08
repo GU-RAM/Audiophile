@@ -46,9 +46,9 @@ export function chosenItemsInfoModal() {
       </div>
       
       <a href=${
-        header.classList.contains(".sub-page")
+        header.classList.contains("sub-page")
           ? "./checkout.html"
-          : header.classList.contains(".checkout-page")
+          : header.classList.contains("checkout-page")
           ? "#"
           : "./IndividualItemsPages/checkout.html"
       }> 

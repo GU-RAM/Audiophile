@@ -18,7 +18,7 @@
     <script src="../assets/js/script.js" type="module"></script>
     <title>Audiophile Shop - Checkout</title>
   </head>
-  <body>
+  <body class="checkout">
     <!-- Header -->
     <div class="header-wrapper">
       <header class="header checkout-page">
@@ -99,6 +99,199 @@
       </header>
     </div>
     <!-- End Of Header -->
+
+    <!-- Main -->
+    <main class="main checkout-main">
+      <a class="go-back-btn">Go Back</a>
+      <form action="" method="post" class="checkout-main-form">
+        <div class="checkout-main-form-top-wrapper">
+          <h1>Checkout</h1>
+          <fieldset class="checkout-main-form-fieldset2">
+            <legend>BILLING DETAILS</legend>
+            <div class="checkout-main-form-inputs-wrapper">
+              <div>
+                <label for="firstName">Name</label>
+                <input
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  placeholder="Alexei Ward"
+                  required
+                />
+              </div>
+              <div>
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="alexeiward@mail.com"
+                  required
+                />
+              </div>
+              <div>
+                <label for="userPhone">Phone Number</label
+                ><input
+                  type="phone"
+                  name="user phone"
+                  id="userPhone"
+                  placeholder="+1 202-555-0136"
+                  required
+                />
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="checkout-main-form-fieldset2">
+            <legend>SHIPPING INFO</legend>
+            <div class="checkout-main-form-inputs-wrapper">
+              <div class="user-adress">
+                <label for="address">Your Address</label>
+                <input
+                  type="text"
+                  name="userAddress"
+                  id="address"
+                  placeholder="1137 Williams Avenue"
+                  required
+                />
+              </div>
+              <div>
+                <label for="zip-code">ZIP Code</label>
+                <input
+                  type="number"
+                  name="zip-code"
+                  id="zip-code"
+                  placeholder="10001"
+                  required
+                />
+              </div>
+              <div>
+                <label for="city">City</label
+                ><input
+                  type="text"
+                  name="city"
+                  id="city"
+                  placeholder="New York"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="country
+              "
+                  >Country</label
+                >
+                <input
+                  type="text"
+                  name="country"
+                  id="country"
+                  placeholder="United States"
+                  required
+                />
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="checkout-main-form-fieldset3">
+            <legend>PAYMENT DETAILS</legend>
+            <div class="checkout-main-form-radio-wrapper">
+              <p>Payment Method</p>
+              <div>
+                <label for="e-money-pay">
+                  <input
+                    type="radio"
+                    name="payment method"
+                    id="e-money-pay"
+                    value="e-money-pay"
+                    required
+                  />e-Money
+                </label>
+                <label for="cash-pay">
+                  <input
+                    type="radio"
+                    name="payment method"
+                    id="cash-pay"
+                    value="cash-pay"
+                    required
+                  />Cash on Delivery
+                </label>
+              </div>
+            </div>
+            <div class="checkout-main-form-inputs-wrapper">
+              <div>
+                <label for="e-money-number">e-Money Number</label>
+                <input
+                  type="number"
+                  name="e-Money Number"
+                  id="e-money-number"
+                  value="e-money-number"
+                  placeholder="238521993"
+                  required
+                />
+              </div>
+              <div>
+                <label for="cash-pay">e-Money PIN </label>
+                <input
+                  type="number"
+                  name="payment-method"
+                  id="cash-pay"
+                  value="cash-pay"
+                  placeholder="6891"
+                  required
+                />
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="checkout-main-form-summary">
+          <h3>SUMMARY</h3>
+          <div class="checkout-main-form-summary-list">
+            <ul>
+              <li>
+                <img
+                  class="chakra-image css-1l5j5dq"
+                  src="../assets/images/home/mobile/image-earphones-yx1.jpg"
+                />
+                <div class="checkout-main-form-summary-list-col2">
+                  <p class="checkout-main-form-summary-list-product-name">
+                    XX99 MK II
+                  </p>
+                  <p class="checkout-main-form-summary-list-product-price">
+                    $ 2,999
+                  </p>
+                </div>
+                <div class="checkout-main-form-summary-list-col3">
+                  <p class="checkout-main-form-summary-list-product-number">
+                    x4
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="checkout-main-form-summary-prices">
+            <div>
+              <p>TOTAL</p>
+              <p class="checkout-main-form-summary-prices-total">$ 13,794</p>
+            </div>
+            <div>
+              <p>SHIPPING</p>
+              <p class="checkout-main-form-summary-prices-shipping">$ 50</p>
+            </div>
+            <div>
+              <p>VAT (INCLUDED)</p>
+              <p class="checkout-main-form-summary-prices-vat">$ 2,758.8</p>
+            </div>
+            <div>
+              <p>GRAND TOTAL</p>
+              <p class="checkout-main-form-summary-prices-grand-total">
+                $ 16,602.8
+              </p>
+            </div>
+            <button type="submit" class="button-primary">CONTINUE & PAY</button>
+          </div>
+        </div>
+      </form>
+    </main>
+    <!-- End Of Main -->
+
     <!-- Footer -->
     <div class="footer-wrapper">
       <footer class="footer">
@@ -111,10 +304,10 @@
           </div>
           <nav class="main-nav footer-top-main-nav">
             <ul>
-              <li><a href="#">HOME</a></li>
-              <li><a href="headphones.html">HEADPHONES</a></li>
-              <li><a href="speakers.html">SPEAKERS</a></li>
-              <li><a href="earphones.html">EARPHONES</a></li>
+              <li><a href="../index.html">HOME</a></li>
+              <li><a href="../headphones.html">HEADPHONES</a></li>
+              <li><a href="../speakers.html">SPEAKERS</a></li>
+              <li><a href="../earphones.html">EARPHONES</a></li>
             </ul>
           </nav>
         </div>
