@@ -60,7 +60,7 @@
     row-gap: 4rem;
     text-align: center;
     align-items: center;
-    color: $color-dark-grey;
+    color: $color-light-grey;
     @include media("md") {
       grid-template-columns: 1fr 1fr;
       text-align: left;
@@ -81,7 +81,7 @@
     &-social-networks {
       display: flex;
       justify-content: center;
-      gap: 1rem;
+      gap: 1.5rem;
       @include media("md") {
         justify-self: end;
       }
@@ -91,10 +91,9 @@
       }
       a {
         color: $color-light;
-      }
-
-      i {
-        font-size: 2.4rem;
+        display: flex;
+        align-items: center;
+        width: 2.6rem;
       }
     }
   }

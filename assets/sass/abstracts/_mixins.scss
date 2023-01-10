@@ -1,21 +1,24 @@
-@mixin replace-text($image, $x: 50%, $y: 50%) {
-  text-indent: -99999em;
-  overflow: hidden;
-  text-align: left;
-
+@mixin background-image($image, $x: 50%, $y: 50%, $size: 100%) {
   background: {
     image: $image;
     repeat: no-repeat;
     position: $x $y;
+    size: $size;
   }
 }
 
-.mail-icon {
-  @include replace-text(url("/images/mail.svg"), 0);
-}
-
 @mixin media($breakpoint) {
-  @media only screen and (min-width: map-get($breakpoints, $breakpoint)) {
-    @content;
+  // If the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Get the breakpoint value.
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    // Write the media query.
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+    // If the breakpoint doesn't exist in the map.
+  } @else {
+    // Log a warning.
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
   }
 }
