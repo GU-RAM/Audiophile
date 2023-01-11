@@ -6,7 +6,7 @@ const header = document.querySelector(".header-wrapper");
 const notificationBtn = document.querySelector("#notifications-btn");
 
 export function createModalAfterOrder() {
-  continueAndPayBtn.addEventListener("click", () => {
+  continueAndPayBtn?.addEventListener("click", () => {
     localStorage.removeItem("products");
 
     // Clear chosen items number

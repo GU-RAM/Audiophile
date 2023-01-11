@@ -91,7 +91,7 @@ button {
     width: 100vw;
     height: 100vh;
     z-index: 3;
-    margin-top: -90px;
+    margin-top: 8.94rem;
     padding: 3rem;
     margin-left: -10px; }
     .header-wrapper .bought-product-info-wrapper #tick-mark-wrapper {
@@ -184,13 +184,22 @@ button {
     justify-content: space-between;
     align-items: center;
     position: relative; }
+    @media (min-width: 576px) {
+      .header-top-top {
+        gap: 50px; } }
   .header .hamburger {
     cursor: pointer; }
+    @media (min-width: 992px) {
+      .header .hamburger {
+        display: none; } }
   .header hr {
     height: 1px;
     border: none;
     background-color: #979797;
     margin: 0 -2rem; }
+    @media (min-width: 768px) {
+      .header hr hr {
+        margin: 0; } }
   .header-hamburger-nav {
     background-color: rgba(0, 0, 0, 0.3);
     z-index: -1;
@@ -202,6 +211,12 @@ button {
     bottom: 0;
     opacity: 0;
     transform: translateY(-100px); }
+    @media (min-width: 576px) {
+      .header-hamburger-nav-hamburger-nav ul {
+        flex-direction: row;
+        gap: 10px; }
+      .header-hamburger-nav-hamburger-nav li {
+        flex-grow: 1; } }
     .header-hamburger-nav-unhide {
       opacity: 1;
       z-index: 2;
@@ -258,6 +273,9 @@ button {
     margin-right: auto;
     margin-top: 110px;
     border-radius: 10px; }
+    @media (min-width: 768px) {
+      .header .chosen-product-modal {
+        margin-right: 20%; } }
     .header .chosen-product-modal .empty-basket {
       display: flex;
       justify-content: center;
@@ -315,6 +333,37 @@ button {
     background-repeat: no-repeat;
     background-position: 10% -20px;
     background-size: 100%; }
+    @media (min-width: 375px) {
+      .header-bottom-img {
+        background-position-y: -60px; } }
+    @media only screen and (min-width: 450px) {
+      .header-bottom-img {
+        width: 80%;
+        margin: 0 auto;
+        background-size: cover;
+        max-width: 450px;
+        background-position: 10% -92px; } }
+    @media (min-width: 576px) {
+      .header-bottom-img {
+        background-position: 10% -142px; } }
+    @media (min-width: 768px) {
+      .header-bottom-img {
+        background-image: url("../images/home/tablet/image-header.jpg");
+        background-repeat: no-repeat;
+        background-position: 10% 80%;
+        background-size: 100%;
+        width: 90%;
+        max-width: 700px; } }
+    @media (min-width: 992px) {
+      .header-bottom-img {
+        background-image: url("../images/home/desktop/image-hero.jpg");
+        background-repeat: no-repeat;
+        background-position: 80% -59px;
+        background-size: 225%;
+        width: 50%;
+        position: static;
+        margin: 0;
+        margin-left: auto; } }
   .header-bottom-text {
     position: absolute;
     display: flex;
@@ -329,6 +378,15 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1; }
+    @media (min-width: 992px) {
+      .header-bottom-text {
+        align-items: flex-start;
+        text-align: left;
+        width: 50%;
+        margin: 0;
+        margin-right: auto;
+        position: static;
+        transform: translate(0, 0); } }
   .header-bottom-text h2 {
     font-size: 1.4rem;
     letter-spacing: 9px;
@@ -343,74 +401,22 @@ button {
     text-align: center; }
   .header .pages-header-bottom h1 {
     font-size: 2.8rem; }
-  @media (min-width: 375px) {
-    .header-bottom-img {
-      background-position-y: -60px; } }
   @media only screen and (min-width: 450px) {
-    .header-bottom-img {
-      width: 80%;
-      margin: 0 auto;
-      background-size: cover;
-      max-width: 450px;
-      background-position: 10% -92px; }
     .header-bottom-text {
       width: 80%;
       max-width: 400px; }
     .header-bottom-text h1 {
       font-size: 5.6rem; } }
   @media (min-width: 576px) {
-    .header-top {
-      gap: 50px; }
     .header .logo {
-      margin-right: auto; }
-    .header-hamburger-nav .common-nav {
-      padding: 80px 0 50px; }
-    .header-hamburger-nav ul {
-      flex-direction: row;
-      gap: 10px; }
-    .header-hamburger-nav li {
-      flex-grow: 1; }
-    .header-bottom-img {
-      background-position: 10% -142px; } }
+      margin-right: auto; } }
+  @media (min-width: 992px) {
+    .header .logo {
+      margin-right: 0; } }
   @media (min-width: 768px) {
-    .header hr {
-      margin: 0; }
-    .header-bottom-img {
-      background-image: url("../images/home/tablet/image-header.jpg");
-      background-repeat: no-repeat;
-      background-position: 10% 80%;
-      background-size: 100%;
-      width: 90%;
-      max-width: 700px; }
     .header .pages-header-bottom h1 {
       font-size: 4rem;
-      padding: 5rem; }
-    .header .chosen-product-modal {
-      margin-right: 20%; } }
-  @media (min-width: 992px) {
-    .header .hamburger {
-      display: none; }
-    .header .logo {
-      margin-right: 0; }
-    .header-bottom-img {
-      background-image: url("../images/home/desktop/image-hero.jpg");
-      background-repeat: no-repeat;
-      background-position: 80% -59px;
-      background-size: 225%;
-      width: 50%;
-      position: static;
-      margin: 0;
-      margin-left: auto; }
-    .header-bottom-text {
-      align-items: flex-start;
-      text-align: left;
-      width: 50%;
-      margin: 0;
-      margin-right: auto;
-      position: static;
-      transform: translate(0, 0); }
-    .header-hamburger-nav {
-      display: none; } }
+      padding: 5rem; } }
 
 .hide-scroll {
   overflow: hidden; }

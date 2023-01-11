@@ -12,7 +12,7 @@
     width: 100vw;
     height: 100vh;
     z-index: 3;
-    margin-top: -90px;
+    margin-top: 8.94rem;
     padding: 3rem;
     margin-left: -10px;
 
@@ -129,10 +129,20 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    @include media("md") {
+      &-top {
+        gap: 50px;
+      }
+    }
   }
 
   .hamburger {
     cursor: pointer;
+    @include media("xlg") {
+      & {
+        display: none;
+      }
+    }
   }
 
   hr {
@@ -140,6 +150,11 @@
     border: none;
     background-color: #979797;
     margin: 0 -2rem;
+    @include media("lg") {
+      & hr {
+        margin: 0;
+      }
+    }
   }
 
   &-hamburger-nav {
@@ -153,6 +168,16 @@
     bottom: 0;
     opacity: 0;
     transform: translateY(-100px);
+    @include media("md") {
+      &-hamburger-nav ul {
+        flex-direction: row;
+        gap: 10px;
+      }
+
+      &-hamburger-nav li {
+        flex-grow: 1;
+      }
+    }
 
     &-unhide {
       opacity: 1;
@@ -222,6 +247,11 @@
     margin-right: auto;
     margin-top: 110px;
     border-radius: 10px;
+    @include media("lg") {
+      & {
+        margin-right: 20%;
+      }
+    }
 
     .empty-basket {
       display: flex;
@@ -311,6 +341,51 @@
       -20px,
       100%
     );
+    @include media("xsm") {
+      & {
+        background-position-y: -60px;
+      }
+    }
+    @media only screen and (min-width: 450px) {
+      & {
+        width: 80%;
+        margin: 0 auto;
+        background-size: cover;
+        max-width: 450px;
+        background-position: 10% -92px;
+      }
+    }
+    @include media("md") {
+      & {
+        background-position: 10% -142px;
+      }
+    }
+    @include media("lg") {
+      & {
+        @include background-image(
+          url("../images/home/tablet/image-header.jpg"),
+          10%,
+          80%,
+          100%
+        );
+        width: 90%;
+        max-width: 700px;
+      }
+    }
+    @include media("xlg") {
+      & {
+        @include background-image(
+          url("../images/home/desktop/image-hero.jpg"),
+          80%,
+          -59px,
+          225%
+        );
+        width: 50%;
+        position: static;
+        margin: 0;
+        margin-left: auto;
+      }
+    }
   }
 
   &-bottom-text {
@@ -327,6 +402,17 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    @include media("xlg") {
+      & {
+        align-items: flex-start;
+        text-align: left;
+        width: 50%;
+        margin: 0;
+        margin-right: auto;
+        position: static;
+        transform: translate(0, 0);
+      }
+    }
   }
 
   &-bottom-text h2 {
@@ -352,20 +438,7 @@
   .pages-header-bottom h1 {
     font-size: 2.8rem;
   }
-  @include media("xsm") {
-    &-bottom-img {
-      background-position-y: -60px;
-    }
-  }
   @media only screen and (min-width: 450px) {
-    &-bottom-img {
-      width: 80%;
-      margin: 0 auto;
-      background-size: cover;
-      max-width: 450px;
-      background-position: 10% -92px;
-    }
-
     &-bottom-text {
       width: 80%;
       max-width: 400px;
@@ -376,91 +449,25 @@
     }
   }
 
-  @include media("md") {
-    &-top {
-      gap: 50px;
+  .logo {
+    @include media("md") {
+      & {
+        margin-right: auto;
+      }
     }
-
-    .logo {
-      margin-right: auto;
-    }
-
-    &-hamburger-nav .common-nav {
-      padding: 80px 0 50px;
-    }
-
-    &-hamburger-nav ul {
-      flex-direction: row;
-      gap: 10px;
-    }
-
-    &-hamburger-nav li {
-      flex-grow: 1;
-    }
-
-    &-bottom-img {
-      background-position: 10% -142px;
+    @include media("xlg") {
+      & {
+        margin-right: 0;
+      }
     }
   }
 
-  @include media("lg") {
-    & hr {
-      margin: 0;
-    }
-    &-bottom-img {
-      @include background-image(
-        url("../images/home/tablet/image-header.jpg"),
-        10%,
-        80%,
-        100%
-      );
-      width: 90%;
-      max-width: 700px;
-    }
-
-    .pages-header-bottom h1 {
-      font-size: 4rem;
-      padding: 5rem;
-    }
-
-    .chosen-product-modal {
-      margin-right: 20%;
-    }
-  }
-  @include media("xlg") {
-    .hamburger {
-      display: none;
-    }
-
-    .logo {
-      margin-right: 0;
-    }
-
-    &-bottom-img {
-      @include background-image(
-        url("../images/home/desktop/image-hero.jpg"),
-        80%,
-        -59px,
-        225%
-      );
-      width: 50%;
-      position: static;
-      margin: 0;
-      margin-left: auto;
-    }
-
-    &-bottom-text {
-      align-items: flex-start;
-      text-align: left;
-      width: 50%;
-      margin: 0;
-      margin-right: auto;
-      position: static;
-      transform: translate(0, 0);
-    }
-
-    &-hamburger-nav {
-      display: none;
+  .pages-header-bottom h1 {
+    @include media("lg") {
+      & {
+        font-size: 4rem;
+        padding: 5rem;
+      }
     }
   }
 }
