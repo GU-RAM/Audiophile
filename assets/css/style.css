@@ -198,7 +198,7 @@ button {
     background-color: #979797;
     margin: 0 -2rem; }
     @media (min-width: 768px) {
-      .header hr hr {
+      .header hr {
         margin: 0; } }
   .header-hamburger-nav {
     background-color: rgba(0, 0, 0, 0.3);
@@ -409,10 +409,12 @@ button {
       font-size: 5.6rem; } }
   @media (min-width: 576px) {
     .header .logo {
-      margin-right: auto; } }
+      margin-right: auto;
+      margin-left: 2rem; } }
   @media (min-width: 992px) {
     .header .logo {
-      margin-right: 0; } }
+      margin-right: 0;
+      margin-left: 0; } }
   @media (min-width: 768px) {
     .header .pages-header-bottom h1 {
       font-size: 4rem;

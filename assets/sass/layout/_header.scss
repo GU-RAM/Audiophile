@@ -151,7 +151,7 @@
     background-color: #979797;
     margin: 0 -2rem;
     @include media("lg") {
-      & hr {
+      & {
         margin: 0;
       }
     }
@@ -453,11 +453,13 @@
     @include media("md") {
       & {
         margin-right: auto;
+        margin-left: 2rem;
       }
     }
     @include media("xlg") {
       & {
         margin-right: 0;
+        margin-left: 0;
       }
     }
   }
