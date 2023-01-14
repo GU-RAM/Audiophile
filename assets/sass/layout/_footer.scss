@@ -94,6 +94,12 @@
         display: flex;
         align-items: center;
         width: 2.6rem;
+
+        &:hover {
+          transition: all 300ml;
+          filter: invert(0.4) sepia(1) saturate(20) hue-rotate(0deg)
+            brightness(0.9);
+        }
       }
     }
   }

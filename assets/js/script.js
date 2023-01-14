@@ -5,7 +5,6 @@ import {
 import { addChosenItemInfoToCart } from "./addToCartBtn.js";
 import { chosenItemsInfoModal } from "./chosenItemsInfoModal.js";
 import { displayNavigation } from "./displayNavigationByHamburger.js";
-import { addChosenItemsNumber } from "./addChosenItems.js";
 import { createModalAfterOrder } from "./modalAfterOrder.js";
 
 // Display main navigation by clicking hamburger
@@ -19,9 +18,6 @@ goBackBtn.forEach((arr) => {
     history.back();
   });
 });
-
-// Notification, add chosen items number
-addChosenItemsNumber();
 
 // Hide notification if items aren't chosen
 const notificationBtn = document.querySelector("#notifications-btn");

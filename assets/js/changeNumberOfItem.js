@@ -11,7 +11,6 @@ export function increaseItemsToBuy() {
   increaseItemsToBuyBtn.forEach((icreaseItemsBtns) => {
     icreaseItemsBtns.addEventListener("click", () => {
       numberOfItemToBuy.forEach((numberOfItemUserChoose) => {
-        console.log(numberOfItemUserChoose.textContent);
         let currentNumberOfItem = +numberOfItemUserChoose.textContent;
         currentNumberOfItem++;
         numberOfItemUserChoose.textContent = currentNumberOfItem;
@@ -29,7 +28,6 @@ export function decreaseItemsToBuy() {
   decreaseItemsToBuyBtn.forEach((dereaseItemsBtns) => {
     dereaseItemsBtns.addEventListener("click", () => {
       numberOfItemToBuy.forEach((numberOfItemUserChoose) => {
-        console.log(numberOfItemUserChoose.textContent);
         let currentNumberOfItem = +numberOfItemUserChoose.textContent;
         if (currentNumberOfItem - 1) {
           currentNumberOfItem--;

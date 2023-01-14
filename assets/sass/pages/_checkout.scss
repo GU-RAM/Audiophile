@@ -86,6 +86,7 @@
         border: 1px solid #cfcfcf;
         border-radius: 0.5rem;
         width: 100%;
+        accent-color: $color-primary;
 
         &:focus-visible {
           outline: 1.5px solid $color-primary;

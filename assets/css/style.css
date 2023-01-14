@@ -212,10 +212,10 @@ button {
     opacity: 0;
     transform: translateY(-100px); }
     @media (min-width: 576px) {
-      .header-hamburger-nav-hamburger-nav ul {
+      .header-hamburger-nav ul {
         flex-direction: row;
         gap: 10px; }
-      .header-hamburger-nav-hamburger-nav li {
+      .header-hamburger-nav li {
         flex-grow: 1; } }
     .header-hamburger-nav-unhide {
       opacity: 1;
@@ -266,7 +266,7 @@ button {
     gap: 3rem;
     padding: 30px;
     width: 100%;
-    max-width: 35rem;
+    max-width: 40rem;
     flex-grow: 0;
     background-color: #fff;
     margin-left: auto;
@@ -283,10 +283,11 @@ button {
       text-align: center; }
       .header .chosen-product-modal .empty-basket img {
         filter: invert(1.4) sepia(1) saturate(20) hue-rotate(0deg) brightness(0.9);
-        width: 96px;
+        width: 9.6rem;
         margin: 0 auto; }
     .header .chosen-product-modal-header {
-      display: flex; }
+      display: flex;
+      margin-bottom: 0; }
       .header .chosen-product-modal-header button {
         margin-left: auto;
         color: rgba(0, 0, 0, 0.5);
@@ -299,7 +300,10 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem; }
+    .header .chosen-product:last-child {
+      margin-bottom: 0; }
     .header .chosen-product-info {
       display: flex;
       align-items: center;
@@ -314,6 +318,8 @@ button {
   .header .chosen-products-cost {
     display: flex;
     justify-content: space-between; }
+    .header .chosen-products-cost p {
+      margin: 0; }
     .header .chosen-products-cost-text {
       color: rgba(0, 0, 0, 0.5); }
     .header .chosen-products-cost-amount {
@@ -405,8 +411,8 @@ button {
     .header-bottom-text {
       width: 80%;
       max-width: 400px; }
-    .header-bottom-text h1 {
-      font-size: 5.6rem; } }
+      .header-bottom-text h1 {
+        font-size: 5.6rem; } }
   @media (min-width: 576px) {
     .header .logo {
       margin-right: auto;
@@ -417,8 +423,7 @@ button {
       margin-left: 0; } }
   @media (min-width: 768px) {
     .header .pages-header-bottom h1 {
-      font-size: 4rem;
-      padding: 5rem; } }
+      font-size: 4rem; } }
 
 .hide-scroll {
   overflow: hidden; }
@@ -452,13 +457,13 @@ button {
     align-items: center; }
   .common-nav a:hover {
     color: #d87d4a;
-    transition: all 300ml; }
+    transition: all 350ml; }
   @media (min-width: 576px) {
     .common-nav ul {
       flex-direction: row;
       gap: 1rem; }
-    .common-nav li {
-      flex-grow: 1; } }
+      .common-nav ul li {
+        flex-grow: 1; } }
   @media (min-width: 768px) {
     .common-nav ul {
       gap: 2rem; } }
@@ -483,7 +488,7 @@ button {
     color: #fff; }
   .main-nav a:hover {
     color: #d87d4a;
-    transition: all 350ml; }
+    transition: all 300ml; }
   .main-nav ul {
     display: flex;
     gap: 30px; }
@@ -772,6 +777,9 @@ button {
         display: flex;
         align-items: center;
         width: 2.6rem; }
+        .footer-bottom-social-networks a:hover {
+          transition: all 300ml;
+          filter: invert(0.4) sepia(1) saturate(20) hue-rotate(0deg) brightness(0.9); }
 
 .home-speaker-ZX9 {
   background-color: #d87d4a;
@@ -909,7 +917,8 @@ button {
         padding: 1.6rem;
         border: 1px solid #cfcfcf;
         border-radius: 0.5rem;
-        width: 100%; }
+        width: 100%;
+        accent-color: #d87d4a; }
         .checkout-main-form-inputs-wrapper input:focus-visible, .checkout-main-form-radio-wrapper input:focus-visible {
           outline: 1.5px solid #d87d4a; }
     .checkout-main-form-radio-wrapper label {

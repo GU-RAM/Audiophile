@@ -139,9 +139,7 @@
   .hamburger {
     cursor: pointer;
     @include media("xlg") {
-      & {
-        display: none;
-      }
+      display: none;
     }
   }
 
@@ -151,9 +149,7 @@
     background-color: #979797;
     margin: 0 -2rem;
     @include media("lg") {
-      & {
-        margin: 0;
-      }
+      margin: 0;
     }
   }
 
@@ -169,12 +165,12 @@
     opacity: 0;
     transform: translateY(-100px);
     @include media("md") {
-      &-hamburger-nav ul {
+      & ul {
         flex-direction: row;
         gap: 10px;
       }
 
-      &-hamburger-nav li {
+      & li {
         flex-grow: 1;
       }
     }
@@ -240,7 +236,7 @@
     gap: 3rem;
     padding: 30px;
     width: 100%;
-    max-width: 35rem;
+    max-width: 40rem;
     flex-grow: 0;
     background-color: $color-light;
     margin-left: auto;
@@ -248,9 +244,7 @@
     margin-top: 110px;
     border-radius: 10px;
     @include media("lg") {
-      & {
-        margin-right: 20%;
-      }
+      margin-right: 20%;
     }
 
     .empty-basket {
@@ -261,13 +255,14 @@
       img {
         filter: invert(1.4) sepia(1) saturate(20) hue-rotate(0deg)
           brightness(0.9);
-        width: 96px;
+        width: 9.6rem;
         margin: 0 auto;
       }
     }
 
     &-header {
       display: flex;
+      margin-bottom: 0;
 
       button {
         margin-left: auto;
@@ -288,6 +283,10 @@
     justify-content: space-between;
     align-items: center;
     font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     &-info {
       display: flex;
@@ -312,6 +311,10 @@
   .chosen-products-cost {
     display: flex;
     justify-content: space-between;
+
+    p {
+      margin: 0;
+    }
 
     &-text {
       color: $color-text-secondary;
@@ -342,49 +345,39 @@
       100%
     );
     @include media("xsm") {
-      & {
-        background-position-y: -60px;
-      }
+      background-position-y: -60px;
     }
     @media only screen and (min-width: 450px) {
-      & {
-        width: 80%;
-        margin: 0 auto;
-        background-size: cover;
-        max-width: 450px;
-        background-position: 10% -92px;
-      }
+      width: 80%;
+      margin: 0 auto;
+      background-size: cover;
+      max-width: 450px;
+      background-position: 10% -92px;
     }
     @include media("md") {
-      & {
-        background-position: 10% -142px;
-      }
+      background-position: 10% -142px;
     }
     @include media("lg") {
-      & {
-        @include background-image(
-          url("../images/home/tablet/image-header.jpg"),
-          10%,
-          80%,
-          100%
-        );
-        width: 90%;
-        max-width: 700px;
-      }
+      @include background-image(
+        url("../images/home/tablet/image-header.jpg"),
+        10%,
+        80%,
+        100%
+      );
+      width: 90%;
+      max-width: 700px;
     }
     @include media("xlg") {
-      & {
-        @include background-image(
-          url("../images/home/desktop/image-hero.jpg"),
-          80%,
-          -59px,
-          225%
-        );
-        width: 50%;
-        position: static;
-        margin: 0;
-        margin-left: auto;
-      }
+      @include background-image(
+        url("../images/home/desktop/image-hero.jpg"),
+        80%,
+        -59px,
+        225%
+      );
+      width: 50%;
+      position: static;
+      margin: 0;
+      margin-left: auto;
     }
   }
 
@@ -403,15 +396,13 @@
     transform: translate(-50%, -50%);
     z-index: 1;
     @include media("xlg") {
-      & {
-        align-items: flex-start;
-        text-align: left;
-        width: 50%;
-        margin: 0;
-        margin-right: auto;
-        position: static;
-        transform: translate(0, 0);
-      }
+      align-items: flex-start;
+      text-align: left;
+      width: 50%;
+      margin: 0;
+      margin-right: auto;
+      position: static;
+      transform: translate(0, 0);
     }
   }
 
@@ -438,38 +429,31 @@
   .pages-header-bottom h1 {
     font-size: 2.8rem;
   }
-  @media only screen and (min-width: 450px) {
-    &-bottom-text {
+  &-bottom-text {
+    @media only screen and (min-width: 450px) {
       width: 80%;
       max-width: 400px;
-    }
 
-    &-bottom-text h1 {
-      font-size: 5.6rem;
+      h1 {
+        font-size: 5.6rem;
+      }
     }
   }
 
   .logo {
     @include media("md") {
-      & {
-        margin-right: auto;
-        margin-left: 2rem;
-      }
+      margin-right: auto;
+      margin-left: 2rem;
     }
     @include media("xlg") {
-      & {
-        margin-right: 0;
-        margin-left: 0;
-      }
+      margin-right: 0;
+      margin-left: 0;
     }
   }
 
   .pages-header-bottom h1 {
     @include media("lg") {
-      & {
-        font-size: 4rem;
-        padding: 5rem;
-      }
+      font-size: 4rem;
     }
   }
 }

@@ -1,4 +1,4 @@
-import { addChosenItemsNumber } from "./addChosenItems.js";
+import { addChosenItemInfoToCart } from "./addToCartBtn.js";
 
 // Create modal after order
 const continueAndPayBtn = document.querySelector(".continue-and-pay");
@@ -9,8 +9,8 @@ export function createModalAfterOrder() {
   continueAndPayBtn?.addEventListener("click", () => {
     localStorage.removeItem("products");
 
-    // Clear chosen items number
-    addChosenItemsNumber();
+    // Clear chosen items amount
+    addChosenItemInfoToCart();
     notificationBtn.classList.remove("empty");
 
     const modalAfterOrder = document.createElement("div");
