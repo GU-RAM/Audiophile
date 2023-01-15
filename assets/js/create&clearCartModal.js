@@ -1,4 +1,5 @@
 const body = document.querySelector("body");
+const notificationBtn = document.querySelector("#notifications-btn");
 let chosenProductModalWrapper = "";
 
 export const removeModal = () => {
