@@ -13,6 +13,14 @@ export function createModalAfterOrder() {
 
     // Check if items are chosen
     if (chosenItemsInfo?.length) {
+      const quantities = chosenItemsInfo?.map((product) => product.quantity);
+
+      // Calculating total quantity
+      const totalQuantity = quantities?.reduce((acc, curr) => {
+        acc += curr;
+        return acc;
+      }, 0);
+
       const modalAfterOrder = document.createElement("div");
       modalAfterOrder.className = "bought-product-info-wrapper";
       modalAfterOrder.innerHTML = `
@@ -25,7 +33,7 @@ export function createModalAfterOrder() {
     <p class="message-to-user">You will receive an email confirmation shortly.</p>
     <div class="bought-products">
       <div class="bought-products-list checkout-form-summary-list">
-        <ul>
+        <ul> 
         ${chosenItemsInfo
           ?.map(
             ({ price, quantity, productName }) =>
@@ -46,6 +54,11 @@ export function createModalAfterOrder() {
           )
           .join("")}
         </ul>
+        <hr>
+        <button class="view-more-btn">and ${
+          totalQuantity - 1
+        } other item(s)</button>
+        <button class="view-less-btn">View less</button>
       </div>
     <div class="total-spent-money">
       <h3>GRAND TOTAL</h3>
@@ -55,8 +68,28 @@ export function createModalAfterOrder() {
     <button><a href="../index.html" class="button-primary back-to-home-btn" >BACK TO HOME</a></button>
 </div>
 `;
-
       header.appendChild(modalAfterOrder);
+
+      // View more and view less functionality
+      const boughtProductsContainer = document.querySelector(
+        ".bought-products-list ul"
+      );
+      console.log(boughtProductsContainer);
+      const viewMoreBtn = document.querySelector(".view-more-btn");
+      const viewLessBtn = document.querySelector(".view-less-btn");
+
+      viewMoreBtn.addEventListener("click", () => {
+        boughtProductsContainer.classList.toggle("expanded");
+        viewMoreBtn.style.display = "none";
+        viewLessBtn.style.display = "block";
+      });
+
+      viewLessBtn.addEventListener("click", () => {
+        boughtProductsContainer.classList.toggle("expanded");
+        viewLessBtn.style.display = "none";
+        viewMoreBtn.style.display = "block";
+      });
+
       document
         .querySelector(".back-to-home-btn")
         .addEventListener("click", () => {

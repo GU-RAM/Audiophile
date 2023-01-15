@@ -78,6 +78,9 @@ a {
 button {
   cursor: pointer; }
 
+.hide {
+  display: none; }
+
 /* header */
 .header-wrapper {
   background-color: #191919;
@@ -171,10 +174,24 @@ button {
           .header-wrapper .bought-product-info-wrapper .bought-products-list {
             border-top-right-radius: 0;
             border-bottom-left-radius: 1rem; } }
+        .header-wrapper .bought-product-info-wrapper .bought-products-list ul {
+          max-height: 7rem;
+          overflow: hidden; }
+        .header-wrapper .bought-product-info-wrapper .bought-products-list button {
+          border: none;
+          color: rgba(0, 0, 0, 0.5);
+          display: block;
+          text-align: center;
+          margin: 0 auto;
+          margin-top: 2rem; }
+        .header-wrapper .bought-product-info-wrapper .bought-products-list .view-less-btn {
+          display: none; }
         .header-wrapper .bought-product-info-wrapper .bought-products-list li {
           border-bottom: 1px solid #000; }
           .header-wrapper .bought-product-info-wrapper .bought-products-list li:last-child {
             border: none; }
+      .header-wrapper .bought-product-info-wrapper .bought-products .expanded {
+        max-height: none; }
       .header-wrapper .bought-product-info-wrapper .bought-products .total-spent-money {
         background-color: #000;
         color: #fff;
@@ -963,8 +980,6 @@ button {
       align-self: center; }
     .checkout-form-information p {
       margin: 0; }
-  .checkout-form .hide {
-    display: none; }
   .checkout-form-summary-list {
     font-weight: 700; }
     .checkout-form-summary-list ul {

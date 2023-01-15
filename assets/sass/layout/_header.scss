@@ -114,6 +114,25 @@
           border-top-right-radius: 0;
           border-bottom-left-radius: 1rem;
         }
+
+        ul {
+          max-height: 7rem;
+          overflow: hidden;
+        }
+
+        button {
+          border: none;
+          color: rgba(0, 0, 0, 0.5);
+          display: block;
+          text-align: center;
+          margin: 0 auto;
+          margin-top: 2rem;
+        }
+
+        .view-less-btn {
+          display: none;
+        }
+
         li {
           border-bottom: 1px solid $color-dark;
 
@@ -121,6 +140,10 @@
             border: none;
           }
         }
+      }
+
+      .expanded {
+        max-height: none;
       }
 
       .total-spent-money {
