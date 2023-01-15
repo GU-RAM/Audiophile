@@ -13,14 +13,6 @@ export function createModalAfterOrder() {
 
     // Check if items are chosen
     if (chosenItemsInfo?.length) {
-      const quantities = chosenItemsInfo?.map((product) => product.quantity);
-
-      // Calculating total quantity
-      const totalQuantity = quantities?.reduce((acc, curr) => {
-        acc += curr;
-        return acc;
-      }, 0);
-
       const modalAfterOrder = document.createElement("div");
       modalAfterOrder.className = "bought-product-info-wrapper";
       modalAfterOrder.innerHTML = `
@@ -56,7 +48,7 @@ export function createModalAfterOrder() {
         </ul>
         <hr>
         <button class="view-more-btn">and ${
-          totalQuantity - 1
+          chosenItemsInfo.length - 1
         } other item(s)</button>
         <button class="view-less-btn">View less</button>
       </div>
