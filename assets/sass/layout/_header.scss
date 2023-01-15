@@ -235,6 +235,7 @@
     position: relative;
     button {
       background-color: #000;
+      border: none;
     }
     button:not(.empty)::after {
       content: attr(data-count);
@@ -251,7 +252,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      border: none;
     }
     &:hover {
       cursor: pointer;

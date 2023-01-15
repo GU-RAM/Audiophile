@@ -257,7 +257,8 @@ button {
   .header-notification {
     position: relative; }
     .header-notification button {
-      background-color: #000; }
+      background-color: #000;
+      border: none; }
     .header-notification button:not(.empty)::after {
       content: attr(data-count);
       height: 20px;
@@ -272,8 +273,7 @@ button {
       border-radius: 50px;
       display: flex;
       justify-content: center;
-      align-items: center;
-      border: none; }
+      align-items: center; }
     .header-notification:hover {
       cursor: pointer; }
   .header .chosen-product-modal-wrapper {
