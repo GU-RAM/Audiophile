@@ -272,7 +272,8 @@ button {
       border-radius: 50px;
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      border: none; }
     .header-notification:hover {
       cursor: pointer; }
   .header .chosen-product-modal-wrapper {
