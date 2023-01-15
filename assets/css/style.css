@@ -91,7 +91,6 @@ button {
     width: 100vw;
     height: 100vh;
     z-index: 3;
-    margin-top: 8.94rem;
     padding: 3rem;
     margin-left: -10px; }
     .header-wrapper .bought-product-info-wrapper #tick-mark-wrapper {
@@ -294,7 +293,7 @@ button {
         background-color: #fff;
         border: none;
         text-decoration: underline; }
-    .header .chosen-product-modal .chechout-button {
+    .header .chosen-product-modal .checkout-button {
       width: 100%; }
   .header .chosen-product {
     display: flex;
@@ -933,6 +932,10 @@ button {
         flex-basis: 3rem; }
     .checkout-main-form-summary-list {
       font-weight: 700; }
+      .checkout-main-form-summary-list ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem; }
       .checkout-main-form-summary-list ul li {
         display: flex;
         gap: 2rem; }
@@ -941,6 +944,8 @@ button {
           object-fit: cover; }
         .checkout-main-form-summary-list ul li div {
           align-self: center; }
+      .checkout-main-form-summary-list-col2 p {
+        margin-bottom: 0.5rem; }
       .checkout-main-form-summary-list-col2 p:nth-child(2) {
         margin-bottom: 0;
         color: rgba(0, 0, 0, 0.5); }

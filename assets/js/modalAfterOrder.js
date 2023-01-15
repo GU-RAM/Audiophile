@@ -11,7 +11,7 @@ export function createModalAfterOrder() {
 
     // Clear chosen items amount
     addChosenItemInfoToCart();
-    notificationBtn.classList.remove("empty");
+    notificationBtn?.classList.remove("empty");
 
     const modalAfterOrder = document.createElement("div");
     modalAfterOrder.className = "bought-product-info-wrapper";

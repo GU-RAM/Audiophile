@@ -9,7 +9,9 @@ export function addChosenItemInfoToCart() {
 
   const numberOfItem = countNumOfItems(chosenProductsInfo);
 
-  notificationNumberOfItems.dataset["count"] = numberOfItem ? numberOfItem : 0;
+  if (notificationNumberOfItems) {
+    notificationNumberOfItems.dataset["count"] = numberOfItem || 0;
+  }
 
   addToCartBtn?.addEventListener("click", (e) => {
     const numberOfItem = document.querySelector(

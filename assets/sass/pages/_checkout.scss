@@ -113,6 +113,12 @@
     &-summary-list {
       font-weight: 700;
 
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
       ul li {
         display: flex;
         gap: 2rem;
@@ -128,6 +134,9 @@
       }
 
       &-col2 {
+        p {
+          margin-bottom: 0.5rem;
+        }
         p:nth-child(2) {
           margin-bottom: 0;
           color: $color-text-secondary;

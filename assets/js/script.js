@@ -6,6 +6,7 @@ import { addChosenItemInfoToCart } from "./addToCartBtn.js";
 import { chosenItemsInfoModal } from "./chosenItemsInfoModal.js";
 import { displayNavigation } from "./displayNavigationByHamburger.js";
 import { createModalAfterOrder } from "./modalAfterOrder.js";
+import { summary } from "./summary.js";
 
 // Display main navigation by clicking hamburger
 displayNavigation();
@@ -23,7 +24,9 @@ goBackBtn.forEach((arr) => {
 const notificationBtn = document.querySelector("#notifications-btn");
 const number = localStorage.getItem("products");
 
-number?.length ? null : notificationBtn.classList.add("empty");
+if (notificationBtn) {
+  number?.length ? null : notificationBtn.classList.add("empty");
+}
 
 //Define number of items user wants to buy
 increaseItemsToBuy();
@@ -39,3 +42,6 @@ chosenItemsInfoModal();
 
 // Display modal after order
 createModalAfterOrder();
+
+// Summary
+summary();
