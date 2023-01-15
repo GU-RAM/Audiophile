@@ -61,6 +61,8 @@
     }
 
     .bought-product-info {
+      max-height: 92vh;
+      overflow-y: auto;
       color: $color-dark;
       background-color: $color-light;
       padding: 3rem;
@@ -69,6 +71,22 @@
       display: flex;
       flex-direction: column;
       gap: 3rem;
+
+      &::-webkit-scrollbar {
+        width: 12px;
+        color: red;
+      }
+
+      &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+        background-color: $color-primary;
+      }
 
       h2 {
         line-height: 1.1;

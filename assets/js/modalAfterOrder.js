@@ -57,7 +57,11 @@ export function createModalAfterOrder() {
 `;
 
       header.appendChild(modalAfterOrder);
-      localStorage.removeItem("products");
+      document
+        .querySelector(".back-to-home-btn")
+        .addEventListener("click", () => {
+          localStorage.removeItem("products");
+        });
     }
   });
 }

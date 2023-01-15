@@ -129,6 +129,8 @@ button {
     .header-wrapper .bought-product-info-wrapper .message-to-user {
       color: rgba(0, 0, 0, 0.5); }
     .header-wrapper .bought-product-info-wrapper .bought-product-info {
+      max-height: 92vh;
+      overflow-y: auto;
       color: #000;
       background-color: #fff;
       padding: 3rem;
@@ -137,6 +139,16 @@ button {
       display: flex;
       flex-direction: column;
       gap: 3rem; }
+      .header-wrapper .bought-product-info-wrapper .bought-product-info::-webkit-scrollbar {
+        width: 12px;
+        color: red; }
+      .header-wrapper .bought-product-info-wrapper .bought-product-info::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px; }
+      .header-wrapper .bought-product-info-wrapper .bought-product-info::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+        background-color: #d87d4a; }
       .header-wrapper .bought-product-info-wrapper .bought-product-info h2 {
         line-height: 1.1;
         margin: 0;
