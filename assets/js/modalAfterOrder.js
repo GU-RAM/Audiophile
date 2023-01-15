@@ -24,25 +24,25 @@ export function createModalAfterOrder() {
     FOR YOUR ORDER</h2>
     <p class="message-to-user">You will receive an email confirmation shortly.</p>
     <div class="bought-products">
-      <div class="bought-products-list checkout-main-form-summary-list">
+      <div class="bought-products-list checkout-form-summary-list">
         <ul>
           <li>
             <img
               src="../assets/images/product-xx59-headphones/mobile/image-product.jpg"
             />
-            <div class="checkout-main-form-summary-list-col2">
-              <p class="checkout-main-form-summary-list-product-name">
+            <div class="checkout-form-summary-list-col2">
+              <p class="checkout-form-summary-list-product-name">
                 XX99 MK II
               </p>
               <p
-                class="checkout-main-form-summary-list-product-price"
+                class="checkout-form-summary-list-product-price"
               >
                 $ 2,999
               </p>
             </div>
-            <div class="checkout-main-form-summary-list-col3">
+            <div class="checkout-form-summary-list-col3">
               <p
-                class="checkout-main-form-summary-list-product-number"
+                class="checkout-form-summary-list-product-number"
               >
                 x4
               </p>
