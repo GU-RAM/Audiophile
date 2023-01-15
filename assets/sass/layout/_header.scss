@@ -96,6 +96,13 @@
           border-top-right-radius: 0;
           border-bottom-left-radius: 1rem;
         }
+        li {
+          border-bottom: 1px solid $color-dark;
+
+          &:last-child {
+            border: none;
+          }
+        }
       }
 
       .total-spent-money {

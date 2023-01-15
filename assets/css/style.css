@@ -159,6 +159,10 @@ button {
           .header-wrapper .bought-product-info-wrapper .bought-products-list {
             border-top-right-radius: 0;
             border-bottom-left-radius: 1rem; } }
+        .header-wrapper .bought-product-info-wrapper .bought-products-list li {
+          border-bottom: 1px solid #000; }
+          .header-wrapper .bought-product-info-wrapper .bought-products-list li:last-child {
+            border: none; }
       .header-wrapper .bought-product-info-wrapper .bought-products .total-spent-money {
         background-color: #000;
         color: #fff;
