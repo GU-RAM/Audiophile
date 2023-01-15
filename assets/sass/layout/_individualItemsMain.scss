@@ -93,6 +93,10 @@
   &-images {
     display: grid;
     row-gap: 2rem;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
   }
 
   &-related-items {
@@ -141,7 +145,6 @@
     &-images-img2 img,
     &-images-img3 img {
       height: 100%;
-      object-fit: cover;
     }
 
     &-images-img3 {
