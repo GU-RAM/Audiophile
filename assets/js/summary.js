@@ -1,22 +1,18 @@
 import { countNumOfItems } from "./countNumOfItems.js";
 import { chosenProductImage } from "./imagesPaths.js";
 
-const header = document.querySelector("header");
-const summaryParentDiv = document.querySelector(".checkout-main-form-summary");
 const summaryListWrapper = document.querySelector(
-  ".checkout-main-form-summary-list"
+  ".checkout-form-summary-list"
 );
 const checkouTotalPrice = document.querySelector(
-  ".checkout-main-form-summary-prices-total"
+  ".checkout-form-summary-prices-total"
 );
 const shipping = document.querySelector(
-  ".checkout-main-form-summary-prices-shipping"
+  ".checkout-form-summary-prices-shipping"
 );
-const vatTotal = document.querySelector(
-  ".checkout-main-form-summary-prices-vat"
-);
+const vatTotal = document.querySelector(".checkout-form-summary-prices-vat");
 const grandTotal = document.querySelector(
-  ".checkout-main-form-summary-prices-grand-total"
+  ".checkout-form-summary-prices-grand-total"
 );
 
 export function summary() {
@@ -57,17 +53,17 @@ export function summary() {
       ({ price, quantity, productName }) =>
         `<li>
         <img src=${chosenProductImage(productName)} alt="${productName}">
-      <div class="checkout-main-form-summary-list-col2">
-        <p class="checkout-main-form-summary-list-product-name">${productName.replaceAll(
+      <div class="checkout-form-summary-list-col2">
+        <p class="checkout-form-summary-list-product-name">${productName.replaceAll(
           "-",
           ""
         )}</p>
-        <p class="checkout-main-form-summary-list-product-price">$ ${price
+        <p class="checkout-form-summary-list-product-price">$ ${price
           .toString()
           .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
       </div>
-      <div class="checkout-main-form-summary-list-col3">
-        <p >x <span class="checkout-main-form-summary-list-product-amount">${quantity}</span></p>
+      <div class="checkout-form-summary-list-col3">
+        <p >x <span class="checkout-form-summary-list-product-amount">${quantity}</span></p>
       </div>
     </li>`
     )

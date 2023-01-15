@@ -97,12 +97,12 @@
     <!-- Main -->
     <main class="main checkout-main">
       <a class="go-back-btn">Go Back</a>
-      <form action="" method="post" class="checkout-main-form">
-        <div class="checkout-main-form-top-wrapper">
+      <form action="" method="post" class="checkout-form">
+        <div class="checkout-form-top-wrapper">
           <h1>Checkout</h1>
-          <fieldset class="checkout-main-form-fieldset2">
+          <fieldset class="checkout-form-fieldset2">
             <legend>BILLING DETAILS</legend>
-            <div class="checkout-main-form-inputs-wrapper">
+            <div class="checkout-form-inputs-wrapper">
               <div>
                 <label for="firstName">Name</label>
                 <input
@@ -110,8 +110,8 @@
                   name="firstName"
                   id="firstName"
                   placeholder="Alexei Ward"
+                  required
                 />
-                <!-- required -->
               </div>
               <div>
                 <label for="email">Email Address</label>
@@ -120,8 +120,8 @@
                   name="email"
                   id="email"
                   placeholder="alexeiward@mail.com"
+                  required
                 />
-                <!-- required -->
               </div>
               <div>
                 <label for="userPhone">Phone Number</label
@@ -130,14 +130,14 @@
                   name="user phone"
                   id="userPhone"
                   placeholder="+1 202-555-0136"
+                  required
                 />
-                <!-- required -->
               </div>
             </div>
           </fieldset>
-          <fieldset class="checkout-main-form-fieldset2">
+          <fieldset class="checkout-form-fieldset2">
             <legend>SHIPPING INFO</legend>
-            <div class="checkout-main-form-inputs-wrapper">
+            <div class="checkout-form-inputs-wrapper">
               <div class="user-adress">
                 <label for="address">Your Address</label>
                 <input
@@ -145,8 +145,8 @@
                   name="userAddress"
                   id="address"
                   placeholder="1137 Williams Avenue"
+                  required
                 />
-                <!-- required -->
               </div>
               <div>
                 <label for="zip-code">ZIP Code</label>
@@ -155,8 +155,8 @@
                   name="zip-code"
                   id="zip-code"
                   placeholder="10001"
+                  required
                 />
-                <!-- required -->
               </div>
               <div>
                 <label for="city">City</label
@@ -165,8 +165,8 @@
                   name="city"
                   id="city"
                   placeholder="New York"
+                  required
                 />
-                <!-- required -->
               </div>
               <div>
                 <label
@@ -179,14 +179,14 @@
                   name="country"
                   id="country"
                   placeholder="United States"
+                  required
                 />
-                <!-- required -->
               </div>
             </div>
           </fieldset>
-          <fieldset class="checkout-main-form-fieldset3">
+          <fieldset class="checkout-form-fieldset3">
             <legend>PAYMENT DETAILS</legend>
-            <div class="checkout-main-form-radio-wrapper">
+            <div class="checkout-form-radio-wrapper">
               <p>Payment Method</p>
               <div>
                 <label for="e-money-pay">
@@ -195,8 +195,9 @@
                     name="payment method"
                     id="e-money-pay"
                     value="e-money-pay"
+                    checked="true"
+                    required
                   />e-Money
-                  <!-- required -->
                 </label>
                 <label for="cash-pay">
                   <input
@@ -204,73 +205,81 @@
                     name="payment method"
                     id="cash-pay"
                     value="cash-pay"
+                    required
                   />Cash on Delivery
-                  <!-- required -->
                 </label>
               </div>
             </div>
-            <div class="checkout-main-form-inputs-wrapper">
-              <div>
-                <label for="e-money-number">e-Money Number</label>
-                <input
-                  type="number"
-                  name="e-Money Number"
-                  id="e-money-number"
-                  value="e-money-number"
-                  placeholder="238521993"
-                />
-                <!-- required -->
+            <div class="checkout-form-bottom">
+              <div class="checkout-form-inputs-wrapper e-money">
+                <div>
+                  <label for="e-money-number">e-Money Number</label>
+                  <input
+                    type="number"
+                    name="e-Money Number"
+                    id="e-money-number"
+                    value="e-money-number"
+                    placeholder="238521993"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="cash-pay">e-Money PIN </label>
+                  <input
+                    type="number"
+                    name="payment-method"
+                    id="cash-pay"
+                    value="cash-pay"
+                    placeholder="6891"
+                    required
+                  />
+                </div>
               </div>
-              <div>
-                <label for="cash-pay">e-Money PIN </label>
-                <input
-                  type="number"
-                  name="payment-method"
-                  id="cash-pay"
-                  value="cash-pay"
-                  placeholder="6891"
+              <div class="checkout-form-information hide">
+                <img
+                  src="../assets/images/icon-cash-on-delivery.svg "
+                  alt="Icon of a deal"
                 />
-                <!-- required -->
+                <p>
+                  The ‘Cash on Delivery’ option enables you to pay in cash when
+                  our delivery courier arrives at your residence. Just make sure
+                  your address is correct so that your order will not be
+                  cancelled.
+                </p>
               </div>
             </div>
           </fieldset>
         </div>
-        <div class="checkout-main-form-summary">
+        <div class="checkout-form-summary">
           <h3>SUMMARY</h3>
-          <div class="checkout-main-form-summary-list"></div>
-          <div class="checkout-main-form-summary-prices">
+          <div class="checkout-form-summary-list"></div>
+          <div class="checkout-form-summary-prices">
             <div>
               <p>TOTAL</p>
               <p>
                 $
-                <span class="checkout-main-form-summary-prices-total"> 0</span>
+                <span class="checkout-form-summary-prices-total"> 0</span>
               </p>
             </div>
             <div>
               <p>SHIPPING</p>
               <p>
                 $
-                <span class="checkout-main-form-summary-prices-shipping">
-                  50</span
-                >
+                <span class="checkout-form-summary-prices-shipping"> 50</span>
               </p>
             </div>
             <div>
               <p>VAT (INCLUDED)</p>
-              <p>
-                $ <span class="checkout-main-form-summary-prices-vat"> 0</span>
-              </p>
+              <p>$ <span class="checkout-form-summary-prices-vat"> 0</span></p>
             </div>
             <div>
               <p>GRAND TOTAL</p>
-              <p class="checkout-main-form-summary-prices-grand-total">
+              <p class="checkout-form-summary-prices-grand-total">
                 $
-                <span class="checkout-main-form-summary-prices-grand-total">
-                  0</span
-                >
+                <span class="checkout-form-summary-prices-grand-total"> 0</span>
               </p>
             </div>
-            <button type="button" class="button-primary continue-and-pay">
+            <button type="submit" class="button-primary continue-and-pay">
               CONTINUE & PAY
             </button>
           </div>

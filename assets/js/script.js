@@ -45,3 +45,18 @@ createModalAfterOrder();
 
 // Summary
 summary();
+
+// Checkout form bottom changing displayed info based on radio checked
+if (
+  document.querySelector('.checkout-form-radio-wrapper input[type="radio"]')
+) {
+  document
+    .querySelectorAll('.checkout-form-radio-wrapper input[type="radio"]')
+    .forEach((elem) => {
+      elem.addEventListener("change", () => {
+        document
+          .querySelectorAll(".checkout-form-bottom div")
+          .forEach((el) => el.classList.toggle("hide"));
+      });
+    });
+}
