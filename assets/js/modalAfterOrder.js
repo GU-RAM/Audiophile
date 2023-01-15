@@ -47,10 +47,14 @@ export function createModalAfterOrder() {
           .join("")}
         </ul>
         <hr>
-        <button class="view-more-btn">and ${
-          chosenItemsInfo.length - 1
-        } other item(s)</button>
-        <button class="view-less-btn">View less</button>
+        ${
+          chosenItemsInfo.length > 1
+            ? `<button class="view-more-btn">and ${
+                chosenItemsInfo.length - 1
+              } other item(s)</button>
+          <button class="view-less-btn">View less</button>`
+            : ""
+        } 
       </div>
     <div class="total-spent-money">
       <h3>GRAND TOTAL</h3>
