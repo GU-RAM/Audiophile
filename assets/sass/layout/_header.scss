@@ -132,14 +132,6 @@
         .view-less-btn {
           display: none;
         }
-
-        li {
-          border-bottom: 1px solid $color-dark;
-
-          &:last-child {
-            border: none;
-          }
-        }
       }
 
       .expanded {

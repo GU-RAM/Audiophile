@@ -46,13 +46,13 @@ export function createModalAfterOrder() {
           )
           .join("")}
         </ul>
-        <hr>
         ${
           chosenItemsInfo.length > 1
-            ? `<button class="view-more-btn">and ${
-                chosenItemsInfo.length - 1
-              } other item(s)</button>
-          <button class="view-less-btn">View less</button>`
+            ? `<hr>
+            <button class="view-more-btn">and ${
+              chosenItemsInfo.length - 1
+            } other item(s)</button>
+            <button class="view-less-btn">View less</button>`
             : ""
         } 
       </div>
@@ -74,13 +74,13 @@ export function createModalAfterOrder() {
       const viewMoreBtn = document.querySelector(".view-more-btn");
       const viewLessBtn = document.querySelector(".view-less-btn");
 
-      viewMoreBtn.addEventListener("click", () => {
+      viewMoreBtn?.addEventListener("click", () => {
         boughtProductsContainer.classList.toggle("expanded");
         viewMoreBtn.style.display = "none";
         viewLessBtn.style.display = "block";
       });
 
-      viewLessBtn.addEventListener("click", () => {
+      viewLessBtn?.addEventListener("click", () => {
         boughtProductsContainer.classList.toggle("expanded");
         viewLessBtn.style.display = "none";
         viewMoreBtn.style.display = "block";

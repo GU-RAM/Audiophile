@@ -183,10 +183,6 @@ button {
           margin-top: 2rem; }
         .header-wrapper .bought-product-info-wrapper .bought-products-list .view-less-btn {
           display: none; }
-        .header-wrapper .bought-product-info-wrapper .bought-products-list li {
-          border-bottom: 1px solid #000; }
-          .header-wrapper .bought-product-info-wrapper .bought-products-list li:last-child {
-            border: none; }
       .header-wrapper .bought-product-info-wrapper .bought-products .expanded {
         max-height: none; }
       .header-wrapper .bought-product-info-wrapper .bought-products .total-spent-money {
