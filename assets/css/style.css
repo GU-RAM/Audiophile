@@ -78,9 +78,6 @@ a {
 button {
   cursor: pointer; }
 
-.hide {
-  display: none; }
-
 /* header */
 .header-wrapper {
   background-color: #191919;
@@ -980,6 +977,8 @@ button {
       align-self: center; }
     .checkout-form-information p {
       margin: 0; }
+  .checkout-form .hide {
+    display: none; }
   .checkout-form-summary-list {
     font-weight: 700; }
     .checkout-form-summary-list ul {
