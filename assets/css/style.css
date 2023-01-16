@@ -257,7 +257,7 @@ button {
   .header-notification {
     position: relative; }
     .header-notification button {
-      background-color: #000;
+      background-color: #191919;
       border: none; }
     .header-notification button:not(.empty)::after {
       content: attr(data-count);
